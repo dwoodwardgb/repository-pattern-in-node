@@ -23,7 +23,6 @@ export const Contact = zod.object({
   name: zod.string().min(1).max(1024).transform(pipe(trim)),
   email: zod.string().email().max(1024).transform(pipe(trim, toLowerCase)),
 });
-
 export type Contact = zod.infer<typeof Contact>;
 
 export const ExistingContact = Contact.merge(
@@ -33,11 +32,9 @@ export const ExistingContact = Contact.merge(
     updatedAt: zod.date(),
   })
 );
-
 export type ExistingContact = zod.infer<typeof ExistingContact>;
 
 export const ContactUpdate = Contact.partial();
-
 export type ContactUpdate = zod.infer<typeof ContactUpdate>;
 
 // Todo extract

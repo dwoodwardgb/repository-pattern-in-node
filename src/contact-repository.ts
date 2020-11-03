@@ -33,16 +33,22 @@ export class ContactRepository {
     );
   }
 
-  async update(id: string, rest: ContactUpdate) {
+  async update(id: string, changeset: ContactUpdate) {
     const contacts = await this.contacts();
     const { modifiedCount } = await contacts.updateOne(
       { _id: idToDb(id) },
-      rest,
+      changeset,
       {
         upsert: false,
       }
     );
     assert.equal(modifiedCount, 1);
+  }
+
+  async delete(id: string) {
+    const contacts = await this.contacts();
+    const { deletedCount } = await contacts.deleteOne({ _id: idToDb(id) });
+    assert.equal(deletedCount, 1);
   }
 
   private async contacts() {

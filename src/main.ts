@@ -1,4 +1,3 @@
-import { Contact } from "./contact-entity";
 import { ContactRepository } from "./contact-repository";
 import { Database } from "./database";
 
