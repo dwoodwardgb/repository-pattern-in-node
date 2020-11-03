@@ -1,5 +1,9 @@
 import * as zod from "zod";
 
+/*
+ * Gratefully stolen from:
+ *   https://dev.to/ascorbic/creating-a-typed-compose-function-in-typescript-3-351i
+ */
 export const pipe = <T extends any[], R>(
   fn1: (...args: T) => R,
   ...fns: Array<(a: R) => R>
