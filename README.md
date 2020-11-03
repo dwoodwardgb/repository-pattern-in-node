@@ -6,5 +6,6 @@ The main idea behind this implementation was to try and deliniate which fields a
 
 ## Todo
 
-[ ] Generalize the pattern so that a "repository" can be created when given Zod parsers for each of its 3 (CRU) types.
-[ ] Add common sense defaults for pagination and sorting options on the read() method.
+- [ ] Generalize the pattern so that a "repository" can be created when given Zod parsers for each of its 3 (CRU) types.
+- [ ] Add common sense defaults for pagination and sorting options on the read() method.
+- [ ] Add unit tests that formalize assumptions about how Zod's transform() function works
