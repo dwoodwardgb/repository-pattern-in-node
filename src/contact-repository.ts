@@ -7,6 +7,7 @@ import {
 } from "./contact-entity";
 import { Database, idFromDb, idToDb, entityFromDb } from "./database";
 
+// I tried creating this using bind but TS couldn't figure it out
 function contactFromDb(input: any) {
   return entityFromDb(ExistingContact.parseAsync, input);
 }

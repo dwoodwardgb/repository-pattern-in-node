@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "mongodb": "^3.6.2",
     "zod": "^2.0.0-beta.16"
