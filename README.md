@@ -1,4 +1,4 @@
-# A TS-first approach to the repository pattern with Node, Zod, and Mongo
+# A TS-first approach to the repository pattern in Node, with Zod and Mongo
 
 I was heavily inspired by [DevMastery's implementation of clean architecture in Node](https://github.com/dev-mastery/comments-api) and I wanted to try and achieve something similar but with a typescript-first approach.
 
